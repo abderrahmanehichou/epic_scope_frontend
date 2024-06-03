@@ -1,16 +1,24 @@
+<!-- src/App.vue -->
+<template>
+  <div id="app">
+    <Header />
+   <!--   <Contact /> --> 
+    <router-view></router-view>
+    <Footer />
+   
+  </div>
+</template>
+
 <script setup>
-/* import HelloWorld from './components/HelloWorld.vue' */
-import Footer from './components/Footer.vue'
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
+/*  import Contact from './components/Contact.vue'; */
 </script>
 
-<template>
-  <div><!--  -->
-<!--     <h1 class="text-3xl font-bold underline bg-red-100">
-    Hello world!
-  </h1> -->
-  </div>
- <!--  <HelloWorld msg="Vite + Vue" /> -->
-  <Footer />
-</template>
+<style>
+/* estilos globales */
+</style>
+
+
 
 
