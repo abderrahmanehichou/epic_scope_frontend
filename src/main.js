@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
+import router from './router'; // Importa el enrutador desde el archivo router
 
 // Importa las dependencias de Font Awesome
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -17,6 +18,10 @@ const app = createApp(App);
 // Registra el componente FontAwesomeIcon globalmente
 app.component('font-awesome-icon', FontAwesomeIcon);
 
+// Usa el router en la aplicación
+app.use(router);
+
+// Monta la aplicación
 app.mount('#app');
 
 
