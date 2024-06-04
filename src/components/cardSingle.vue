@@ -1,100 +1,170 @@
 <template>
-    <div class="" id="containerCard">
-        <div id="singleCard" 
+    <div
+      class="flex flex-col items-center justify-center bg-gradient-to-br from-slate-950 to-emerald-950 px-5 py-8 xl:px-10 xl:py-28"
+    >
+      <!-- Image Container -->
+  
+      <figure
+        ref="flipContainer"
         @mousemove="handleMouseMove"
         @mouseleave="resetRotation"
-       
+        @keydown="handleKeyDown"
+        tabindex="0"
+        class="flip-container relative h-96 w-64 cursor-pointer rounded-3xl"
+      >
+        <!-- Front Side Of Card -->
+       <!--  cambiar el display -->
+        <div
+          class="flip-card-front flex-col absolute left-0 top-0 flex h-full w-full items-center justify-center rounded-3xl  bg-red-600 bg-center transition-all duration-1000 ease-in-out"
         >
+     <h2 class="mb-2 text-2xl font-bold text-white">Menú<br>Sondika </h2> 
 
-            <div id="CardFront" class="absolute left-0 top-0 h-full w-full items-center rounded-3xl transition-all duration-1000 ease-in-out">
-                <h2 class="mb-2 text-2xl font-bold">esto es cardFront</h2>
-                <img class="size-24 object-cover" src="../assets/mesa.png" alt="">
-           
-            </div>
-
-            <div id="CardBack" class="absolute left-0 top-0 h-full w-full items-center gap-3 justify-center rounded-3xl transition-all duration-1000 ease-in-out">esto es back</div>
+        <img
+            src="../assets/mesa.png"
+            alt="mesa"
+            class="size-24 object-cover"
+          />
+        
         </div>
+  
+  
+        <!-- Back Side Of Card -->
+        
+        
+        <figcaption
+          class="flip-card-back absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-3 rounded-3xl bg-white p-4 text-slate-100 transition-all duration-1000 ease-in-out"
+        >
+         
+          <h3 class="font-semibold underline">Menu Bodas</h3>
+  
+          <div class="grid grid-cols-1 grid-rows-3 gap-2 text-nowrap text-sm">
+            <div
+              class="rounded-full bg-amber-500 px-4 py-2 text-center font-semibold text-slate-900"
+            >
+              Sondika
+            </div>
+  
+            <div
+              class="rounded-full bg-amber-500 px-4 py-2 text-center font-semibold text-slate-900"
+            >
+              Txorierri
+            </div>
+  
+            <div
+              class="rounded-full bg-amber-500 px-4 py-2 text-center font-semibold text-slate-900"
+            >
+              Izarza
+            </div>
+          </div>
+        </figcaption>
+      </figure>
     </div>
-</template>
-
-<script setup>
-import {ref}from vue;
-const singleCard= ref(null)
-const isFliped= ref(false);
-/* rotación hacia todos lados */
-const handleMouseMove = (event)=>{
-    const rect= singleCard.value.getBoundingClientRect();
-    const mouseX= event.clientX-rect.left;
-    const mouseY= event.clientY -rect.top;
-    const rotateX= (mouseY/rect.height -0.5)*50;
-    const rotateY= (mouseX/rect.width -0.5)*50;
-
-    singleCard.value.style.transform=`
-    rotateX(${rotateX}deg)rotateY(${rotateY}deg)`;
-};
-
-const resetRotation = ()=>{
-    singleCard.value.style.transform="";
-    };
-
-
-const handleFlip = ()=> {
-    if (isFliped.value){
-        singleCard.value.classList.remove("is-flipped");
-        isFliped.value= false;
-    }else{
-        singleCard.value.classList.add("is-flipped");isFliped.value= true;
+  </template>
+  
+  <script setup>
+  import { ref } from "vue";
+  
+  const flipContainer = ref(null);
+  const isFlipped = ref(false);
+  
+  // Rotating The Card Based On The Mouse Movement
+  
+  const handleMouseMove = (event) => {
+    const rect = flipContainer.value.getBoundingClientRect();
+    const mouseX = event.clientX - rect.left;
+    const mouseY = event.clientY - rect.top;
+    const rotateX = (mouseY / rect.height - 0.5) * 50;
+    const rotateY = -(mouseX / rect.width - 0.5) * 50;
+    flipContainer.value.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  };
+  
+  // Resetting The Rotation Back To Original State
+  
+  const resetRotation = () => {
+    flipContainer.value.style.transform = "";
+  };
+  
+  // Checking The Value Of isFlipped & Changing its Value
+  
+  const handleFlip = () => {
+    if (isFlipped.value) {
+      flipContainer.value.classList.remove("is-flipped");
+      isFlipped.value = false;
+    } else {
+      flipContainer.value.classList.add("is-flipped");
+      isFlipped.value = true;
     }
-};
-
-</script>
-<style scoped>
-#containerCard{
-    position: relative;
-    width: 250px;
-    height: 320px;
+  };
+  
+  // Triggering handleFlip Function on pressing 'Enter' Key
+  
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      handleFlip();
     }
-
-#singleCard{
-position: absolute;
-width: 100%;
-height:100% ;
-transform-style: preserve-3d;
-transition: all 0.5s ease;
-
-}  
-
-
-#cardFront{
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  };
+  </script>
+  
+  <style scoped>
+  
+  /* Adding Perspective To Parent Container */
+  
+  .flip-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Hiding The Back Of Card */
+  
+  .flip-card-front,
+  .flip-card-back {
     backface-visibility: hidden;
-    background: #ffe728;
-    color: #333;
-}  
-#cardBack{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background: #fafafa;
-    color: #333;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+  }
+  
+  /* Setting The Default Postion Of The Back Of The Card */
+  
+  .flip-card-back {
     transform: rotateY(180deg);
-}  
-
-#singleCard:hover#cardFront{
+  }
+  
+  /* Flipping The Card On Hover */
+  
+  .flip-container:hover .flip-card-front {
     transform: rotateY(180deg);
-}
-
-#singleCard:hover#cardBack{
+  }
+  
+  .flip-container:hover .flip-card-back {
     transform: rotateY(360deg);
-}
-#singleCard .isFliped #cardBack{
-    transform: rotateY(360deg);
-}
-#singleCard .isFliped #carFront{
+  }
+  
+  /* Flipping The Card On 'Enter' Key Event */
+  
+  .flip-container.is-flipped .flip-card-front {
     transform: rotateY(180deg);
-}
+  }
+  
+  .flip-container.is-flipped .flip-card-back {
+    transform: rotateY(360deg);
+  }
+  
+  /* Adding Depth To Elements On The Back */
+  
+  .flip-container .flip-card-back h2 {
+    transform: translateZ(40px);
+  }
+  .flip-container .flip-card-back img {
+    transform: translateZ(50px);
+  }
+  .flip-container .flip-card-back h3 {
+    transform: translateZ(40px);
+  }
+  .flip-container .flip-card-back div {
+    transform: translateZ(30px);
+  }
+  </style>  
 
-</style>
+          
+        
