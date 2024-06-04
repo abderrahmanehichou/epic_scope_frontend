@@ -45,6 +45,7 @@
    /*  border: 3px solid grey; */
     border-radius: 10px;
    transition: 0.2s;
+   color: white;
   }
   ul li:hover{
     background-color: gray;
