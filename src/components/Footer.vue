@@ -18,7 +18,7 @@
      </div>
       </div>
       <div class="rede-social bg-red-800">
-      <h2 class="text-xl text-indigo-50">Visita nuestras redes Sociales</h2>
+      <h2 class="text-xl text-indigo-50 pt-2">Visita nuestras redes Sociales</h2>
       <div class="social-icons flex space-x-4 justify-center items-center">
         <a href="https://x.com/IzarzaSL" target="_blank"><font-awesome-icon :icon="['fab', 'x-twitter']" class="text-darck-500 text-2xl" /> </a>
         <a href="https://www.facebook.com/RestauranteIzarza/?locale=ca_ES" target="_blank"><font-awesome-icon :icon="['fab', 'facebook']" class="text-blue-600 text-2xl" /></a>
@@ -51,7 +51,7 @@
   width: auto;
   height: 10rem;
 }
-.horario{ margin-top: 30px;
+.horario{ margin-top: 5px;
   margin-right: 20rem;
 }
 .dereccion{
