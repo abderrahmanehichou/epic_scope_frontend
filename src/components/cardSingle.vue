@@ -15,9 +15,9 @@
         <!-- Front Side Of Card -->
        <!--  cambiar el display -->
         <div
-          class="flip-card-front flex-col absolute left-0 top-0 flex h-full w-full items-center justify-center rounded-3xl  bg-red-600 bg-center transition-all duration-1000 ease-in-out"
+          class="flip-card-front flex-col absolute left-0 top-0 flex h-full w-full items-center justify-center rounded-3xl  bg-red-800 bg-center transition-all duration-1000 ease-in-out"
         >
-     <h2 class="mb-2 text-2xl font-bold text-white">Menú<br>Sondika </h2> 
+     <h2 class="mb-2 text-2xl font-bold text-white">Menú boda </h2> 
 
         <img
             src="../assets/mesa.png"
@@ -35,7 +35,7 @@
           class="flip-card-back absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-3 rounded-3xl bg-white p-4 text-slate-100 transition-all duration-1000 ease-in-out"
         >
          
-          <h3 class="font-semibold underline">Menu Bodas</h3>
+          <h3 class="font-semibold underline">Menúes</h3>
   
           <div class="grid grid-cols-1 grid-rows-3 gap-2 text-nowrap text-sm">
             <div
