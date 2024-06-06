@@ -1,6 +1,6 @@
 <!-- src/App.vue -->
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <Header />
    <!--   <Contact /> --> 
     <router-view></router-view>
@@ -16,6 +16,12 @@ import Footer from './components/Footer.vue';
 </script>
 
 <style>
+/* .app{
+  background-image: url(../assets/decoracion-de-bodas-.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+} */
 /* estilos globales */
 </style>
 

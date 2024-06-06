@@ -5,12 +5,12 @@
         <h2 class="text-4xl text-indigo-50">RESTAURANTE IZARZA</h2>
       </div>
       <nav class=" w-90 h-20 ">
-        <ul class=" w-90 flex justify-between font-bold text-xl p-8">
+        <ul class=" w-90 flex justify-evenly font-bold text-xl p-8">
           <li><router-link to="/">Inicio</router-link></li>
           <li><router-link to="/Eventos">Eventos</router-link></li>
           <li><router-link to="/Menus-Cartas">Menus y Cartas</router-link></li>
-          <li><router-link to="/Servicios">Servicios</router-link></li>
-          <li><router-link to="/Reserva">Reserva</router-link></li>
+         <li><router-link to="/Servicios">Servicios</router-link></li> 
+         <!--  <li><router-link to="/Reserva">Reserva</router-link></li> -->
           <li><router-link to="/Contact">Contacto</router-link></li>
         </ul>
       </nav>

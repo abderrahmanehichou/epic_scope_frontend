@@ -22,7 +22,7 @@
       <div class="social-icons flex space-x-4 justify-center items-center">
         <a href="https://x.com/IzarzaSL" target="_blank"><font-awesome-icon :icon="['fab', 'x-twitter']" class="text-darck-500 text-2xl" /> </a>
         <a href="https://www.facebook.com/RestauranteIzarza/?locale=ca_ES" target="_blank"><font-awesome-icon :icon="['fab', 'facebook']" class="text-blue-600 text-2xl" /></a>
-        <a href=""><font-awesome-icon :icon="['fab', 'instagram']" class="text-pink-500 text-2xl" /></a>
+        <a href="https://www.instagram.com/izarza1530"><font-awesome-icon :icon="['fab', 'instagram']" class="text-pink-500 text-2xl" /></a>
       </div>
       <div class="penascal-colaboraction  sm:-ml-2 flex justify-center items-center">
         <p class="text-xl text-indigo-50">Izarza es una empresa de Peñascal Kooperativa</p>
