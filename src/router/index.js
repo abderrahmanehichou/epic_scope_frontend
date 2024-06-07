@@ -8,6 +8,7 @@ import ServiciosView from '../views/ServiciosView.vue';
 /* import ReservaView from '../views/ReservaView.vue'; */
 import ContactView from '../views/ContactView.vue';
 
+
 const routes = [
   { path: '/', name: 'Home', component: HomeView },
   { path: '/eventos', name: 'Eventos', component: EventosView },

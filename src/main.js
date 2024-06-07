@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 // Importa los iconos de Font Awesome que necesitas
 import { faXTwitter, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import 'material-design-icons-iconfont/dist/material-design-icons.css';
 
 // Importa los estilos de Tailwind CSS
 import './assets/tailwind.css';
