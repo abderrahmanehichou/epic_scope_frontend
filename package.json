@@ -11,6 +11,8 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
+    "flowbite": "^2.3.0",
+    "material-design-icons-iconfont": "^6.7.0",
     "vue": "^3.2.0",
     "vue-router": "^4.3.2"
   },
