@@ -66,7 +66,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped>gi
 .carousel {
   position: relative;
   width: 100%;
