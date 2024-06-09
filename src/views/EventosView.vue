@@ -1,11 +1,14 @@
 <template>
     <div>
       <!--   <Header /> -->
-      <h1 class="text-3xl font-bold underline bg-blue-100">Eventos</h1>
+      <h1 class="text-3xl font-bold underline bg-blue-100">faltaaaaaaaaa carusel</h1>
       <!-- Agrega aquí los componentes específicos para la vista de Eventos -->
     <!--   <Footer /> -->
   <DecEventos />
   <DecMenus />
+  <cardSingle/>
+  <DecEventos/>
+  <CardsComuniones/>
   <CondicionEventos />
     </div>
   </template>
@@ -14,5 +17,7 @@
 import DecEventos from '../components/DecEventos.vue';
 import DecMenus from '../components/DecMenus.vue';
 import CondicionEventos from'../components/CondicionEventos.vue';
-  </script>
+import cardSingle from '../components/cardSingle.vue';
+import CardsComuniones from '../components/CardsComuniones.vue';
+</script>
   
