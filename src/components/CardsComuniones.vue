@@ -2,7 +2,7 @@
 <template>
     <div class="bg-red-800">
     <h2 class="mb-2 text-2xl font-bold text-white text-center">Menu comuniones</h2>
-        <div class="inline-grid grid-cols-2 items-center gap-60 ml-96 pl-80 mb-12">
+    <div class="inline-grid grid-cols-4 items-center gap-x-60 pl-7">
             <figure
               ref="flipContainer"
               @mousemove="handleMouseMove"
@@ -113,6 +113,8 @@
         
         .flip-card-back {
           transform: rotateY(180deg);
+          width: 150%;
+          height: 150%;
         }
         
         /* Flipping The Card On Hover */
