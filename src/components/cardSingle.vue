@@ -18,12 +18,31 @@
         <div
           class="flip-card-front flex-col absolute left-0 top-0 flex h-full w-full items-center justify-center rounded-3xl  bg-red-800 bg-center transition-all duration-1000 ease-in-out"
         >
+<<<<<<< HEAD
           <h2 class="mb-2 text-2xl font-bold text-white">Menú Sondika</h2>
           <img
             src="../assets/mesa.png"
             alt="mesa"
             class="size-24 object-cover"
           />
+=======
+      <!--    <h2 v-if="!mostrar">{{ titulo }}</h2>
+        
+        <img :src="imagenSrc" alt="Imagen"/>
+        <button @click="mostrarMenu">Mostrar menu</button>
+        <p v-if="mostrar">{{ nombre }}</p> -->
+
+
+
+    <h2 class="mb-2 text-2xl font-bold text-white">Menú<br>Sondika </h2> 
+
+        <img
+            src="../assets/mesa.png"
+            alt="mesa"
+            class="size-24 object-cover"
+          /> 
+        
+>>>>>>> lourdes
         </div>
 
         <!-- Back Side Of Card -->
@@ -87,20 +106,35 @@
           class="flip-card-back absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-3 rounded-3xl bg-white p-4 text-slate-100 transition-all duration-1000 ease-in-out"
         >
          
+<<<<<<< HEAD
           <div class="grid grid-cols-1 grid-rows-3 gap-2 text-nowrap text-sm">
+=======
+          <h3 class="font-semibold underline">Menu Bodas</h3>
+  
+         <div class="grid grid-cols-1 grid-rows-3 gap-2 text-nowrap text-sm">
+>>>>>>> lourdes
             <div
               class="rounded-full bg-amber-500 px-4 py-2 text-center font-semibold text-slate-900  underline text-lg"
             >
+<<<<<<< HEAD
               Entrantes
+=======
+              {{ menu }}
+>>>>>>> lourdes
             </div>
             <div
               class="rounded-full bg-amber-500 px-4 py-2 text-center font-semibold text-slate-900 underline text-lg"
             >
+<<<<<<< HEAD
             Plato-principal
+=======
+           {{menu}}
+>>>>>>> lourdes
             </div>
             <div
               class="rounded-full bg-amber-500 px-4 py-2 text-center font-semibold text-slate-900  underline text-lg"
             >
+<<<<<<< HEAD
             Postre
             </div>
             <div
@@ -168,11 +202,19 @@
               class="rounded-full bg-amber-500 px-4 py-2 text-center font-semibold text-slate-900  underline  text-lg"
             >
               Precio
+=======
+              {{menu}}
+              
+>>>>>>> lourdes
             </div>
           </div>
+          
+
+
         </figcaption>
       </figure>
     </div>
+<<<<<<< HEAD
   </div>
 </template>
 
@@ -207,6 +249,64 @@ const handleFlip = (index, container) => {
   } else {
     refs[container].value.classList.add("is-flipped");
     isFlipped.value[index] = true;
+=======
+  </template>
+  
+  <script setup>
+  import { ref } from "vue";
+ 
+  const flipContainer = ref(null);
+  const isFlipped = ref(false);
+  
+  // Rotating The Card Based On The Mouse Movement
+  
+  const handleMouseMove = (event) => {
+    const rect = flipContainer.value.getBoundingClientRect();
+    const mouseX = event.clientX - rect.left;
+    const mouseY = event.clientY - rect.top;
+    const rotateX = (mouseY / rect.height - 0.5) * 50;
+    const rotateY = -(mouseX / rect.width - 0.5) * 50;
+    flipContainer.value.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  };
+  
+  // Resetting The Rotation Back To Original State
+  
+  const resetRotation = () => {
+    flipContainer.value.style.transform = "";
+  };
+  
+  // Checking The Value Of isFlipped & Changing its Value
+  
+  const handleFlip = () => {
+    if (isFlipped.value) {
+      flipContainer.value.classList.remove("is-flipped");
+      isFlipped.value = false;
+    } else {
+      flipContainer.value.classList.add("is-flipped");
+      isFlipped.value = true;
+    }
+  };
+  
+  // Triggering handleFlip Function on pressing 'Enter' Key
+  
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      handleFlip();
+    }
+  };
+
+
+  </script>
+  
+  <style scoped>
+  
+  /* Adding Perspective To Parent Container */
+  
+  .flip-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+>>>>>>> lourdes
   }
 };
 
