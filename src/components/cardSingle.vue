@@ -17,13 +17,21 @@
         <div
           class="flip-card-front flex-col absolute left-0 top-0 flex h-full w-full items-center justify-center rounded-3xl  bg-red-600 bg-center transition-all duration-1000 ease-in-out"
         >
-     <h2 class="mb-2 text-2xl font-bold text-white">Menú<br>Sondika </h2> 
+      <!--    <h2 v-if="!mostrar">{{ titulo }}</h2>
+        
+        <img :src="imagenSrc" alt="Imagen"/>
+        <button @click="mostrarMenu">Mostrar menu</button>
+        <p v-if="mostrar">{{ nombre }}</p> -->
+
+
+
+    <h2 class="mb-2 text-2xl font-bold text-white">Menú<br>Sondika </h2> 
 
         <img
             src="../assets/mesa.png"
             alt="mesa"
             class="size-24 object-cover"
-          />
+          /> 
         
         </div>
   
@@ -37,25 +45,29 @@
          
           <h3 class="font-semibold underline">Menu Bodas</h3>
   
-          <div class="grid grid-cols-1 grid-rows-3 gap-2 text-nowrap text-sm">
+         <div class="grid grid-cols-1 grid-rows-3 gap-2 text-nowrap text-sm">
             <div
               class="rounded-full bg-amber-500 px-4 py-2 text-center font-semibold text-slate-900"
             >
-              Sondika
+              {{ menu }}
             </div>
   
             <div
               class="rounded-full bg-amber-500 px-4 py-2 text-center font-semibold text-slate-900"
             >
-              Txorierri
+           {{menu}}
             </div>
   
             <div
               class="rounded-full bg-amber-500 px-4 py-2 text-center font-semibold text-slate-900"
             >
-              Izarza
+              {{menu}}
+              
             </div>
           </div>
+          
+
+
         </figcaption>
       </figure>
     </div>
@@ -63,7 +75,7 @@
   
   <script setup>
   import { ref } from "vue";
-  
+ 
   const flipContainer = ref(null);
   const isFlipped = ref(false);
   
@@ -103,6 +115,8 @@
       handleFlip();
     }
   };
+
+
   </script>
   
   <style scoped>
