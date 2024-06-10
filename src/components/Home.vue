@@ -18,7 +18,7 @@
        
       </div>
   <div class="flex flex-col justify-between ml-10">
-    <div class="flex flex-wrap justify-start items-center gap-28 pl-32">
+    <div class="flex flex-wrap justify-start items-center gap-28 ">
       <img src="../assets/8793-removebg-preview 4.png" alt="" class="with"> 
       <img src="../assets/descarga__2_-removebg-preview 4.png" alt="" class="with">
       <img src="../assets/images-removebg-preview 4.png" alt="" class="with">
