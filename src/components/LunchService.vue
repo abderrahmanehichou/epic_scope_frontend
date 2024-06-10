@@ -2,7 +2,7 @@
 <template>
     <div class="bg-red-800">
     <h2 class=" m-10 pt-10 text-2xl font-bold text-white  text-center">Servicio de Lunch </h2>
-        <div class="inline-grid grid-cols-2 items-center gap-60 ml-96 pl-80 mb-12">
+        <div class="inline-grid grid-cols-2 items-center gap-60 ml-96 pl-60 mb-12">
             <figure
               ref="flipContainer"
               @mousemove="handleMouseMove"
