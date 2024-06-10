@@ -1,7 +1,7 @@
 
 <template>
     <div class="bg-red-800">
-    <h2 class="mb-2 text-2xl font-bold text-white text-center mb-14">Menu comuniones</h2>
+    <h2 class="mb-2 text-2xl font-bold text-white text-center">Menu comuniones</h2>
         <div class="inline-grid grid-cols-2 items-center gap-60 ml-96 pl-80 mb-12">
             <figure
               ref="flipContainer"
@@ -30,7 +30,7 @@
               <!-- lado de atras -->
         
               <figcaption
-                class="flip-card-back absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-3 rounded-3xl bg-white p-4 text-red-800 transition-all duration-1000 ease-in-out"
+                class="flip-card-back absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-3 rounded-3xl bg-red-800 p-4 text-white transition-all duration-1000 ease-in-out"
               >
           
                

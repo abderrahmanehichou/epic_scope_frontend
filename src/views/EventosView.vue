@@ -6,7 +6,7 @@
     <!--   <Footer /> -->
   <DecEventos />
   <DecMenus />
-  <cardSingle/>
+ <cardSingle/> 
   <DecEventos/>
   <CardsComuniones/>
   <CondicionEventos />
