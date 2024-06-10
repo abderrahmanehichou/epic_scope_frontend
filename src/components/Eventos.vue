@@ -1,20 +1,27 @@
 <template>
-  <div id="carousel" class="carousel">
-    <div class="carousel-inner" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
+  <div class="carousel">
+    <div class="carousel-slider" :style="{ left: `-${currentIndex * 100}%` }">
       <div class="carousel-item" v-for="(item, index) in items" :key="index">
-        <img :src="item.src" :alt="item.alt" @error="handleImageError(index)">
+        <img :src="item.src" :alt="item.alt">
+        <div class="carousel-caption">{{ item.caption }}</div>
       </div>
     </div>
+    <div class="carousel-controls">
+      <button class="control-prev" @click="prevSlide">&#10094;</button>
+      <button class="control-next" @click="nextSlide">&#10095;</button>
+    </div>
     <div class="carousel-indicators">
-      <button
-        v-for="(item, index) in items"
-        :key="index"
-        :class="{ active: currentIndex === index }"
-        @click="showSlide(index)"
+      <button 
+        v-for="(item, index) in items" 
+        :key="index" 
+        :class="{ active: currentIndex === index }" 
+        @click="goToSlide(index)"
       ></button>
     </div>
-    <button class="carousel-control-prev" @click="prevSlide">&#10094;</button>
-    <button class="carousel-control-next" @click="nextSlide">&#10095;</button>
+  </div>
+
+  <div>
+    
   </div>
 </template>
 
@@ -24,43 +31,37 @@ export default {
     return {
       currentIndex: 0,
       items: [
-        { src: "public/carrussel/recurresol1.jpg", alt: "Image 1" },
-        { src: "public/carrussel/recurresol2.jpg", alt: "Image 2" },
-        { src: "public/carrussel/recurresol3.jpg", alt: "Image 3" },
-        { src: "public/carrussel/recurresol4.jpg", alt: "Image 4" },
-        { src: "public/carrussel/recurresol5.webp", alt: "Image 5" },
-        { src: "public/carrussel/recurresol6.jpg", alt: "Image 6" },
-        { src: "public/carrussel/recurresol7.jpg", alt: "Image 7" }
+        { src: "/public/carrussel/recurresol1.jpg", alt: "Image 1" },
+        { src: "/public/carrussel/recurresol2.jpg", alt: "Image 2" },
+        { src: "/public/carrussel/recurresol3.jpg", alt: "Image 3" },
+        { src: "/public/carrussel/recurresol4.jpg", alt: "Image 4" },
+        { src: "/public/carrussel/recurresol5.webp", alt: "Image 5" }
       ]
     };
   },
   mounted() {
-    this.autoSlide = setInterval(this.nextSlide, 3000);
+    this.startAutoSlide();
   },
   beforeDestroy() {
-    clearInterval(this.autoSlide);
+    this.stopAutoSlide();
   },
   methods: {
-    showSlide(index) {
-      const totalSlides = this.items.length;
-  
-      if (index >= totalSlides) {
-        this.currentIndex = 0;
-      } else if (index < 0) {
-        this.currentIndex = totalSlides - 1;
-      } else {
-        this.currentIndex = index;
-      }
-    },
     nextSlide() {
-      this.showSlide(this.currentIndex + 1);
+      this.currentIndex = (this.currentIndex + 1) % this.items.length;
     },
     prevSlide() {
-      this.showSlide(this.currentIndex - 1);
+      this.currentIndex = (this.currentIndex - 1 + this.items.length) % this.items.length;
     },
-    handleImageError(index) {
-      console.error(`Error loading image at index ${index}:`, this.items[index].src);
-      this.items[index].src = 'public/carrussel/placeholder.jpg'; // Reemplaza con una imagen de marcador de posición
+    goToSlide(index) {
+      this.currentIndex = index;
+    },
+    startAutoSlide() {
+      this.interval = setInterval(() => {
+        this.nextSlide();
+      }, 3000);
+    },
+    stopAutoSlide() {
+      clearInterval(this.interval);
     }
   }
 };
@@ -68,32 +69,57 @@ export default {
 
 <style scoped>
 .carousel {
-  position: relative;
   width: 100%;
   max-width: 100%;
-  height: 20rem;
-  margin: auto;
+  height: 30rem;
+  margin: 0 auto;
+  position: relative;
   overflow: hidden;
 }
 
-.carousel-inner {
+.carousel-slider {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  transition: left 0.5s ease;
 }
 
 .carousel-item {
-  min-width: 100%;
-  box-sizing: border-box;
-  height: 100%;
+  flex: 0 0 100%;
 }
 
 .carousel-item img {
   width: 100%;
-  height: 100%;
-  display: block;
+  height: auto;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(152, 19, 19, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.control-prev,
+.control-next {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #7f0909;
+  
 }
 
 .carousel-indicators {
@@ -102,41 +128,21 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 10px;
+  gap: 5px;
+  
 }
 
 .carousel-indicators button {
-  width: 10px;
-  height: 10px;
-  background-color: #a32c2c;
+  background-color: #7f0909;
   border: none;
   border-radius: 50%;
+  width: 12px;
+  height: 12px;
   cursor: pointer;
   opacity: 0.5;
 }
 
 .carousel-indicators button.active {
   opacity: 1;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  color: #7f0909;
-}
-
-.carousel-control-prev {
-  left: 10px;
-}
-
-.carousel-control-next {
-  right: 10px;
 }
 </style>
