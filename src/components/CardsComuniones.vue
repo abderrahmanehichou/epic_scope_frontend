@@ -1,8 +1,9 @@
 
 <template>
-    <div class="bg-red-800">
+    <div class="bg-red-800  ">
     <h2 class="mb-2 text-2xl font-bold text-white text-center">Menu comuniones</h2>
-    <div class="inline-grid grid-cols-4 items-center gap-x-60 pl-7">
+    <div class="inline-grid grid-cols-2  items-center gap-60 ml-96 pl-60  mb-12">
+     
             <figure
               ref="flipContainer"
               @mousemove="handleMouseMove"
@@ -30,7 +31,7 @@
               <!-- lado de atras -->
         
               <figcaption
-                class="flip-card-back absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-3 rounded-3xl bg-red-800 p-4 text-white transition-all duration-1000 ease-in-out"
+                class="flip-card-back absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-3 rounded-3xl bg-white p-4 text-white transition-all duration-1000 ease-in-out"
               >
           
                
@@ -151,4 +152,6 @@
         .flip-container .flip-card-back div {
           transform: translateZ(30px);
         }
+   
+          
         </style>

@@ -5,13 +5,14 @@
       <carrouesel />
     </div>
       <!-- Agrega aquí los componentes específicos para la vista de Eventos -->
-    <!--   <Footer /> -->
+    
   <DecEventos />
   <DecMenus />
  <cardSingle/> 
   <DecEventos/>
   <CardsComuniones/>
   <CondicionEventos />
+ 
     </div>
   </template>
   
@@ -22,6 +23,7 @@ import CondicionEventos from'../components/CondicionEventos.vue';
 import cardSingle from '../components/cardSingle.vue';
 import CardsComuniones from '../components/CardsComuniones.vue';
 import carrouesel from '../components/carrouesel.vue';
+
 </script>
 <style>
 .carrousel{

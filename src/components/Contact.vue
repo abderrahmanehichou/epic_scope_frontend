@@ -48,7 +48,9 @@
     </form>
       <div class="map mt-4 mb-4">
         <h3 class="text-2xl text-center font-bold text-red-800 underline mb-4">ESTAMOS AQUÍ, MUY CERCA DE TÍ.</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1452.0942263630404!2d-2.926808!3d43.289375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4ff7ba7fbfdb%3A0x483d279077b19302!2sRestaurante%20Izarza!5e0!3m2!1ses!2ses!4v1717586128070!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map" style="text-align: center;">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1452.0942263630404!2d-2.926808!3d43.289375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4ff7ba7fbfdb%3A0x483d279077b19302!2sRestaurante%20Izarza!5e0!3m2!1ses!2ses!4v1717586128070!5m2!1ses!2ses" width="600" height="450" style="border:0; width: 90%; max-width: 700px; margin: 0 auto;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
         <div class="flex flex-col text-white bg-red-800 mt-4 rounded-xl pl-12 text-2xl">
     <h3 class="underline">Contacto</h3>
     <p>
@@ -84,7 +86,7 @@
   
     message.value = 'Formulario enviado correctamente';
   
-    // Realiza la lógica de envío del formulario aquí
+  
   };
   </script>
   <style scoped>
@@ -97,4 +99,42 @@
    }
    p{ display: flex;
      align-items: center;}
+
+     @media screen and (max-width: 640px) {
+  .w-96 {
+    width: 80%; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+
+  .ml-20 {
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+
+  .map {
+    width: 100%; 
+    margin: 1 auto; 
+  }
+
+  .pl-12 {
+    padding-left: 1rem;
+  }
+
+  .text-3xl {
+    font-size: 1.5rem; 
+    text-align: center; 
+    margin-bottom: 1rem; 
+  }
+
+  .flex {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+  }
+}
+
+
+
+   
   </style>

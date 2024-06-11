@@ -19,10 +19,6 @@
         ></button>
       </div>
     </div>
-  
-    <div>
-      
-    </div>
   </template>
   
   <script>
@@ -119,7 +115,6 @@
     cursor: pointer;
     font-size: 30px;
     color: #7f0909;
-    
   }
   
   .carousel-indicators {
@@ -129,7 +124,6 @@
     transform: translateX(-50%);
     display: flex;
     gap: 5px;
-    
   }
   
   .carousel-indicators button {
@@ -144,6 +138,18 @@
   
   .carousel-indicators button.active {
     opacity: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel {
+      height: 20rem;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .carousel {
+      height: 15rem;
+    }
   }
   </style>
   
