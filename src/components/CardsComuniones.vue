@@ -11,7 +11,7 @@
               tabindex="0"
               class="flip-container relative h-96 w-64 cursor-pointer rounded-3xl "
               v-for="menu in menues_comuniones"  :key="menues_comuniones"
-            >
+            > 
               <!-- lado de adelante -->
         
               <div
@@ -52,7 +52,6 @@
         const flipContainer = ref(null);
         const isFlipped = ref(false);
         
-        // efecto rotacion
         
         const handleMouseMove = (event) => {
           const rect = flipContainer.value.getBoundingClientRect();
@@ -63,13 +62,10 @@
           flipContainer.value.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
         };
         
-        // reseteo rotacion
         
         const resetRotation = () => {
           flipContainer.value.style.transform = "";
         };
-        
-        // cambiovalor is fliped
         
         const handleFlip = () => {
           if (isFlipped.value) {
@@ -81,7 +77,6 @@
           }
         };
         
-        // Triggering handleFlip Function on pressing 'Enter' Key
         
         const handleKeyDown = (event) => {
           if (event.key === "Enter") {
@@ -92,7 +87,6 @@
         
         <style scoped>
         
-        /*perspectiva*/
         
         .flip-container {
           perspective: 1000px;
@@ -100,7 +94,6 @@
           transition: transform 0.5s ease;
         }
         
-        /* Hiding The Back Of Card */
         
         .flip-card-front,
         .flip-card-back {
@@ -109,13 +102,11 @@
           transform-style: preserve-3d;
         }
         
-        /* Setting The Default Postion Of The Back Of The Card */
         
         .flip-card-back {
           transform: rotateY(180deg);
         }
         
-        /* Flipping The Card On Hover */
         
         .flip-container:hover .flip-card-front {
           transform: rotateY(180deg);
@@ -125,7 +116,6 @@
           transform: rotateY(360deg);
         }
         
-        /* Flipping The Card On 'Enter' Key Event */
         
         .flip-container.is-flipped .flip-card-front {
           transform: rotateY(180deg);
@@ -135,7 +125,6 @@
           transform: rotateY(360deg);
         }
         
-        /* Adding Depth To Elements On The Back */
         
         .flip-container .flip-card-back h2 {
           transform: translateZ(40px);
@@ -150,3 +139,4 @@
           transform: translateZ(30px);
         }
         </style>
+

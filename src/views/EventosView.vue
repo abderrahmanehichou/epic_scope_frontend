@@ -10,7 +10,8 @@
   <DecMenus />
  <cardSingle/> 
   <DecEventos/>
-  <CardsComuniones/>
+  <CardsComunionesClone/>
+  <!-- <CardsComuniones/> -->
   <CondicionEventos />
     </div>
   </template>
@@ -20,7 +21,7 @@ import DecEventos from '../components/DecEventos.vue';
 import DecMenus from '../components/DecMenus.vue';
 import CondicionEventos from'../components/CondicionEventos.vue';
 import cardSingle from '../components/cardSingle.vue';
-import CardsComuniones from '../components/CardsComuniones.vue';
+import CardsComunionesClone from '../components/CardsComunionesClone.vue';
 import carrouesel from '../components/carrouesel.vue';
 </script>
 <style>
