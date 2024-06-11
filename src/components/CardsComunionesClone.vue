@@ -15,11 +15,11 @@
           <div
             class="flip-card-front bg-white absolute left-0 top-0 flex flex-col h-full w-full items-center justify-center rounded-lg bg-cover bg-center transition-all duration-300 ease-in-out"
           >
-            <h2 class="mb-4 text-lg font-bold text-red-800">{{ menu }}</h2>
+            <h2 class="mb-4 text-3xl font-bold text-red-800 mt-0">{{ menu }}</h2>
             <img
               src="../assets/comuniones.png"
               alt="Imagen de Comuniones"
-              class="w-60 h-60 object-cover mb-4"
+              class="imagen-comunion w-60 h-60 object-cover mb-0"
             />
           </div>
   
@@ -86,6 +86,15 @@
     perspective: 1000px;
     transform-style: preserve-3d;
     transition: transform 0.5s ease;
+    height: 45rem;
+    margin: 10rem 0 5rem 0;
+  }
+
+  .imagen-comunion {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10rem;
+    height: 60%;
   }
   
   /* Hiding The Back Of Card */
@@ -94,6 +103,8 @@
     backface-visibility: hidden;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
     transform-style: preserve-3d;
+
+    height: 45rem;
   }
   
   /* Setting The Default Postion Of The Back Of The Card */
