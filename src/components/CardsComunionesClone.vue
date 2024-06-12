@@ -106,7 +106,9 @@
 
     height: 45rem;
   }
-  
+  .flip-card-front{
+    height: 25rem;
+  }
   /* Setting The Default Postion Of The Back Of The Card */
   .flip-card-back {
     transform: rotateY(180deg);
