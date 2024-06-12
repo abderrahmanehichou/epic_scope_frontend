@@ -27,11 +27,11 @@
       return {
         currentIndex: 0,
         items: [
-          { src: "/public/carrussel/recurresol1.jpg", alt: "Image 1" },
-          { src: "/public/carrussel/recurresol2.jpg", alt: "Image 2" },
-          { src: "/public/carrussel/recurresol3.jpg", alt: "Image 3" },
+          { src: "/public/carrussel/Fachada_izarza 2.jpg", alt: "Image 1" },
+          { src: "/public/carrussel/Comedor_izarza_2_carpeta_generica 2.jpg", alt: "Image 2" },
+          { src: "/public/carrussel/Comedor_izarza_carpeta_generica2.jpg", alt: "Image 3" },
           { src: "/public/carrussel/recurresol4.jpg", alt: "Image 4" },
-          { src: "/public/carrussel/recurresol5.webp", alt: "Image 5" }
+          { src: "/public/carrussel/recurresol2.jpg", alt: "Image 5" }
         ]
       };
     },
@@ -67,7 +67,7 @@
   .carousel {
     width: 100%;
     max-width: 100%;
-    height: 30rem;
+    height: 35rem;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -85,7 +85,7 @@
   
   .carousel-item img {
     width: 100%;
-    height: auto;
+    height: 40rem;
   }
   
   .carousel-caption {
@@ -139,17 +139,34 @@
   .carousel-indicators button.active {
     opacity: 1;
   }
+  @media screen and (max-width: 1280px) {
+    .carousel {
+    height: 20rem;
+    }
+    .carousel-item img {
+    width: 100%;
+    height: 20rem;
+  }
   
+}
   @media (max-width: 768px) {
     .carousel {
-      height: 20rem;
+    height: 20rem;
     }
+    .carousel-item img {
+    width: 100%;
+    height: 20rem;
+  }
   }
   
   @media (max-width: 640px) {
     .carousel {
-      height: 15rem;
+      height: 20rem;
     }
+    .carousel-item img {
+
+    height: 20rem;
+  }
   }
   </style>
   

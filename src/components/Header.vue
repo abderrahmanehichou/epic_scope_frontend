@@ -51,14 +51,14 @@ export default {
     }
     .navbar {
       padding: 1rem;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       display: flex;
       justify-content: center; 
       align-items: center; 
     }
     .navbar a {
       text-decoration: none;
-      color: #333;
+      color: #fffdfd;
       font-size: 1.5rem;
       font-weight: 900;
     }
@@ -108,7 +108,7 @@ export default {
    
     .navbar a {
       text-decoration: none;
-      color: #333;
+      color: #fffdfd;
       font-size: 1.25rem;
       font-weight: 600;
     }
@@ -117,6 +117,7 @@ export default {
       .navbar {
         margin-bottom: -2px;
         flex-direction: column; 
+        color: #fffdfd;
       }
       .navbar ul {
         display: none;

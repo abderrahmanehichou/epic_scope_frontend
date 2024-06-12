@@ -1,10 +1,7 @@
 <template>
   <div class="body">
     <div class="bg-cover relative">
-      <img src="../assets/1717411703540.webp" alt="Descripción de la imagen" class="w-full h-full object-cover">
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white">
-        <h1 class="text-4xl font-bold">RESTAURANTE IZARZA</h1>
-      </div>
+      <img src="/public/carrussel/Fachada_izarza 2.jpg" alt="Descripción de la imagen" class="w-full h-full object-cover">
     </div>
 
     <div class="bg-red-800 flex gap-10 p-5 h-3/6 mt-1">
@@ -22,13 +19,13 @@
       <div class="flex flex-col justify-between ml-10">
   <h3 class="text-white text-3xl font-bold text-center">Conoce este lugar impresionante</h3>
 
-  <div class="flex flex-wrap justify-center items-center gap-28">
+  <div class="flex flex-wrap  justify-center items-center gap-25">
     <img src="../assets/8793-removebg-preview 4.png" alt="" class="with"> 
     <img src="../assets/descarga__2_-removebg-preview 4.png" alt="" class="with">
     <img src="../assets/images-removebg-preview 4.png" alt="" class="with">
   </div>
 
-  <img src="../assets/Izarza_historia 5.png" alt="" class="with-">
+  <img src="/public/carrussel/Monolito.jpg" alt="" class="with-">
 </div>
 
     </div>
@@ -41,24 +38,30 @@
 
 <style scoped>
   .bg-cover {
-    height: 300px; 
+    height: 40rem; 
     background-size: cover;
     position: relative;
   }
 
   .bg-gray-500 {
-    width: 50rem;
+    width: 60rem;
     height: 50rem;
-  } 
+  }
   .with{
     width:10rem ;
-  height:auto ;}
+    height:10rem ;}
+      
   .with-{
-    width:60rem;
-    height: 35rem;  
+    width:45rem;
+    height: 30rem; 
+     
   }
   @media screen and (max-width: 1280px) {
-  .bg-red-800 {
+    .bg-cover {
+    height: 20rem; 
+    
+  }
+    .bg-red-800 {
     text-align: center; 
     align-items: center; 
   }
@@ -84,9 +87,11 @@
 }
 
   .with- {
-    width: 100%;
-    height: auto;
+    width: 80%;
+    height: 30rem;
     margin: 0 auto 1rem; 
+    margin-top: 1rem;
+    
   }
 
   .bg-red-800 {
@@ -106,8 +111,8 @@
   }
 
   .with- {
-    width: 100%; 
-    height: auto; 
+    width: 80%; 
+    height: 20rem; 
     margin-top: 1rem; 
   }
   .text-small-center {

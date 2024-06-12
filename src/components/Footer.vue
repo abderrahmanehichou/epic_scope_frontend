@@ -36,6 +36,7 @@
 
 footer {
   text-align: center;
+  
 }
 .img-zaraza{
   width: 100%; 
@@ -44,6 +45,7 @@ footer {
 }
 .horario{
   margin-top: 1rem; 
+  
 }
 .dereccion{
   margin-bottom: 1rem; 

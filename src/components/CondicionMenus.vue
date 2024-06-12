@@ -8,7 +8,7 @@
         info
       </i>
       <p class="text-red-800 text-center text-2xl mb-4">Tocar para información adicional sobre menus</p>
-      <div v-if="showInfo" class="bg-gray-500 p-4 rounded-md shadow-md">
+      <div v-if="showInfo" class="bg-gray-500 p-4 rounded-md shadow-md ">
         <p class="text-white">Los menús incluyen la comida descrita, pan, agua y vino.</p>
         <p class="text-white">Los menús se tienen que confirmar con anticipación, en caso contrario se cobrará el número de comensales reservado.</p>
         <p class="text-white">Los precios incluyen el 10% de Iva.</p>
