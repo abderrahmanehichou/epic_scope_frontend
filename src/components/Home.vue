@@ -9,7 +9,7 @@
         
           <h3 class="text-white text-3xl font-bold text-center ">RESTAURANTE IZARZA</h3>
           <p class="text-white text-2xl text-center p-20 text-small-center">
-  El restaurante está ubicado en el edificio de una antigua escuela de barriada, que <span class="text-green-600">Peñascal S. Coop</span>, rehabilitó para instalar <span class="text-green-600">UNA ESCUELA DE HOSTELERÍA </span> que funciona de manera paralela a la del Restaurante e imparte formación a aquellas personas que quieran introducirse en el mundo de la Hostelería, o bien a quienes estando ya en el sector deseen lograr un mayor nivel de profesionalidad a través de los cursos de reciclaje que en ella se organicen y un restaurante con un compromiso social que abre al público.
+  El restaurante está ubicado en el edificio de una antigua escuela de barriada, que <span class="text-black-600 font-bold">Peñascal S. Coop</span>, rehabilitó para instalar <span class="text-black-600 font-bold">UNA ESCUELA DE HOSTELERÍA </span> que funciona de manera paralela a la del Restaurante e imparte formación a aquellas personas que quieran introducirse en el mundo de la Hostelería, o bien a quienes estando ya en el sector deseen lograr un mayor nivel de profesionalidad a través de los cursos de reciclaje que en ella se organicen y un restaurante con un compromiso social que abre al público.
 </p>
 
 
