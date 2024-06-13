@@ -1,14 +1,14 @@
 <template>
   <footer>
-    <div class="flex flex-col sm:flex-row justify-between items-center h-auto sm:h-40 bg-gray-500 px-4 sm:px-0">
+    <div class="flex flex-col sm:flex-row justify-between items-center t h-auto sm:h-40 bg-gray-500 px-4 sm:px-60">
       <div class="text-center sm:text-left mb-4 sm:mb-0">
-        <p class="text-xl text-indigo-50">Dirección <br>Izarza Bledea,48 <br> 48150 Sondika</p>
+        <p class="direccion text-xl text-indigo-50">Dirección <br>Izarza Bledea,48 <br> 48150 Sondika</p>
       </div>
       <div class="text-center">
         <img src="/src/assets/imagen1.png" alt="" class="img-zaraza h-20 sm:h-auto">
       </div>
       <div class="text-center sm:text-right">
-        <p class="text-xl text-indigo-50">Horario <br>Martes a Domingo <br>13:00 a 16.00 <br>Sábados <br>21:00 a 23:00</p>
+        <p class="direccion text-xl text-indigo-50">Horario <br>Martes a Domingo <br>13:00 a 16.00 <br>Sábados <br>21:00 a 23:00</p>
       </div>
     </div>
     <div class="bg-red-800">

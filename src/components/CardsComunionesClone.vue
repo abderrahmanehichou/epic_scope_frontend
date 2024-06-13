@@ -1,7 +1,7 @@
 <template>
     <div class="bg-red-800">
       <h2 class="mb-2 text-2xl font-bold text-white text-center">Menús de Comuniones</h2>
-      <div class="grid grid-cols-2 gap-4 justify-items-center">
+      <div class="grid  grid-cols-2 gap-4 justify-items-center">
         <figure
           v-for="(menu, index) in menues_comuniones"
           :key="index"
