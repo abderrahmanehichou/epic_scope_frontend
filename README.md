@@ -7,11 +7,11 @@ Perfecto, ajustemos el README con el nombre del proyecto específico:
 Este proyecto es una mejora del proyecto Restaurante Izarza que incluye nuevas funcionalidades utilizando Vue.js. Entre las mejoras destacadas se encuentran media queries en las cartas, un nuevo panel administrativo y ajustes en el tamaño de las cartas para alojar menús. Además, se ha implementado la funcionalidad para mostrar los menús en las cartas después de obtenerlos de la base de datos.
 
 
-### Equipo
+## Equipo
 
+1. Abderrahmane Hichou
+2. Djebbour Kelthoum
 
-* **Abderrahmane Hichou: TEAM DEVELOPER**
-* **Djebbour Kelthoum: TEAM DEVELOPER**
 
 
 
