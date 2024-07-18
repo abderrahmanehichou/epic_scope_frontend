@@ -14,14 +14,14 @@
     -->
      
    <!--  </div> -->
-   <admVen/>
+
   
   </template>
   
   <script setup>
 
   import Contact from '../components/Contact.vue';
-  import admVen from '../components/admVen.vue';
+  
 
 
   </script>

@@ -79,9 +79,8 @@
     }
   };
   </script>
-  
   <style scoped>
-  /* Perspective */
+  
   .flip-container {
     perspective: 1000px;
     transform-style: preserve-3d;
@@ -89,7 +88,7 @@
     height: 45rem;
     margin: 10rem 0 5rem 0;
   }
-
+  
   .imagen-comunion {
     width: 100%;
     margin: 0 auto;
@@ -97,24 +96,24 @@
     height: 60%;
   }
   
-  /* Hiding The Back Of Card */
   .flip-card-front,
   .flip-card-back {
     backface-visibility: hidden;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
     transform-style: preserve-3d;
-
     height: 45rem;
   }
-  .flip-card-front{
+  
+  .flip-card-front {
     height: 25rem;
   }
-  /* Setting The Default Postion Of The Back Of The Card */
+  
+  
   .flip-card-back {
     transform: rotateY(180deg);
   }
   
-  /* Flipping The Card On 'Enter' Key Event */
+
   .flip-container.is-flipped .flip-card-front {
     transform: rotateY(180deg) scale(1.1);
   }
@@ -123,7 +122,6 @@
     transform: rotateY(360deg) scale(1.1);
   }
   
-  /* Adding Depth To Elements On The Back */
   .flip-container .flip-card-back h2 {
     transform: translateZ(40px);
   }
@@ -140,10 +138,11 @@
     transform: translateZ(30px);
   }
   
-  /* Additional Styling */
   .grid {
     display: grid;
     justify-items: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
   }
   
   .flip-container {
@@ -156,19 +155,17 @@
     padding: 20px;
   }
   
-  .flip-card-back {
-    text-align: center;
-    padding: 20px;
-  }
   
-  ul {
-    padding: 0;
-    list-style: none;
-  }
   
-  li {
-    margin-bottom: 10px;
-  }
-  
+  @media screen and (max-width: 768px) {
+       .grid {
+         grid-template-columns: repeat(1, minmax(0, 1fr));
+         justify-items: center;
+       }
+     
+       .flip-container {
+         margin: 5rem auto;
+       }
+     }
   </style>
   

@@ -63,7 +63,6 @@
                 class="h-64 w-64 object-cover"
               />
             </div>
-
             <!-- Back Side Of Card -->
             <figcaption
               class="flip-card-back absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center gap-3 rounded-3xl bg-white p-4 text-slate-100 transition-all duration-1000 ease-in-out"
@@ -194,51 +193,81 @@
     };
     </script>
 
-    <style scoped>
-    /* Adding Perspective To Parent Container */
-    .flip-container {
-      perspective: 1000px;
-      transform-style: preserve-3d;
-      transition: transform 0.5s;
-    }
+<style scoped>
+/*perspectiva*/
+.flip-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  height: 45rem;
+  margin: 10rem 0 5rem 0;
+}
 
-    /* Styling Front & Back Of The Card */
-    .flip-container .flip-card-front,
-    .flip-container .flip-card-back {
-      backface-visibility: hidden;
-    }
 
-    .flip-container .flip-card-front {
-      transform: rotateY(0deg);
-    }
 
-    .flip-container .flip-card-back {
-      transform: rotateY(180deg);
-    }
+/* Hiding The Back Of Card */
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  height: 45rem;
+}
 
-    /* Flipping The Card On Hover */
-    .flip-container:hover .flip-card-front {
-      transform: rotateY(180deg);
-    }
+/* Setting The Default Postion Of The Back Of The Card */
+.flip-card-front {
+  height: 25rem;
+}
 
-    .flip-container:hover .flip-card-back {
-      transform: rotateY(360deg);
-    }
+.flip-card-back {
+  transform: rotateY(180deg);
+}
 
-    /* Flipping The Card On 'Enter' Key Event */
-    .flip-container.is-flipped .flip-card-front {
-      transform: rotateY(180deg);
-    }
+/* Flipping The Card On Hover */
+.flip-container:hover .flip-card-front {
+  transform: rotateY(180deg);
+}
 
-    .flip-container.is-flipped .flip-card-back {
-      transform: rotateY(360deg);
-    }
+.flip-container:hover .flip-card-back {
+  transform: rotateY(360deg);
+}
 
-    /* Adding Depth To Elements On The Back */
-    .flip-container .flip-card-back h2,
-    .flip-container .flip-card-back img,
-    .flip-container .flip-card-back h3,
-    .flip-container .flip-card-back div {
-      transform: translateZ(30px);
-    }
-    </style>
+/* Flipping The Card On 'Enter' Key Event */
+.flip-container.is-flipped .flip-card-front {
+  transform: rotateY(180deg) scale(1.1);
+}
+
+.flip-container.is-flipped .flip-card-back {
+  transform: rotateY(360deg) scale(1.1);
+}
+
+/* Adding Depth To Elements On The Back */
+.flip-container .flip-card-back h2 {
+  transform: translateZ(40px);
+}
+
+.flip-container .flip-card-back img {
+  transform: translateZ(50px);
+}
+
+.flip-container .flip-card-back h3 {
+  transform: translateZ(40px);
+}
+
+.flip-container .flip-card-back div {
+  transform: translateZ(30px);
+}
+
+
+
+@media (max-width: 1280px) {
+  .flex {
+    flex-direction: column;
+  }
+  .flip-container {
+    width: 20rem;
+  
+    margin: 0 auto 2rem auto;
+  }
+}
+</style>

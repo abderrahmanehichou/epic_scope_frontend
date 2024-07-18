@@ -92,63 +92,82 @@
       };
       </script>
       
-      <style scoped>
       
-      /*perspectiva*/
-      
-      .flip-container {
-        perspective: 1000px;
-        transform-style: preserve-3d;
-        transition: transform 0.5s ease;
-      }
-      
-      /* Hiding The Back Of Card */
-      
-      .flip-card-front,
-      .flip-card-back {
-        backface-visibility: hidden;
-        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-        transform-style: preserve-3d;
-      }
-      
-      /* Setting The Default Postion Of The Back Of The Card */
-      
-      .flip-card-back {
-        transform: rotateY(180deg);
-      }
-      
-      /* Flipping The Card On Hover */
-      
-      .flip-container:hover .flip-card-front {
-        transform: rotateY(180deg);
-      }
-      
-      .flip-container:hover .flip-card-back {
-        transform: rotateY(360deg);
-      }
-      
-      /* Flipping The Card On 'Enter' Key Event */
-      
-      .flip-container.is-flipped .flip-card-front {
-        transform: rotateY(180deg);
-      }
-      
-      .flip-container.is-flipped .flip-card-back {
-        transform: rotateY(360deg);
-      }
-      
-      /* Adding Depth To Elements On The Back */
-      
-      .flip-container .flip-card-back h2 {
-        transform: translateZ(40px);
-      }
-      .flip-container .flip-card-back img {
-        transform: translateZ(50px);
-      }
-      .flip-container .flip-card-back h3 {
-        transform: translateZ(40px);
-      }
-      .flip-container .flip-card-back div {
-        transform: translateZ(30px);
-      }
-      </style>
+<style scoped>
+/*perspectiva*/
+.flip-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  height: 45rem;
+  margin: 10rem 0 5rem 0;
+}
+
+
+
+/* Hiding The Back Of Card */
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  height: 45rem;
+}
+
+/* Setting The Default Postion Of The Back Of The Card */
+.flip-card-front {
+  height: 25rem;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Flipping The Card On Hover */
+.flip-container:hover .flip-card-front {
+  transform: rotateY(180deg);
+}
+
+.flip-container:hover .flip-card-back {
+  transform: rotateY(360deg);
+}
+
+/* Flipping The Card On 'Enter' Key Event */
+.flip-container.is-flipped .flip-card-front {
+  transform: rotateY(180deg) scale(1.1);
+}
+
+.flip-container.is-flipped .flip-card-back {
+  transform: rotateY(360deg) scale(1.1);
+}
+
+/* Adding Depth To Elements On The Back */
+.flip-container .flip-card-back h2 {
+  transform: translateZ(40px);
+}
+
+.flip-container .flip-card-back img {
+  transform: translateZ(50px);
+}
+
+.flip-container .flip-card-back h3 {
+  transform: translateZ(40px);
+}
+
+.flip-container .flip-card-back div {
+  transform: translateZ(30px);
+}
+
+
+
+@media (max-width: 1280px) {
+  .flex {
+    flex-direction: column;
+  }
+  .flip-container {
+    width: 20rem;
+  
+    margin: 0 auto 2rem auto;
+  }
+}
+</style>
